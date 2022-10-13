@@ -1,9 +1,9 @@
 import './css/styles.css';
-import { refs } from './js/refs';
+import { refs } from '../js/refs';
 import axios from 'axios';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-import { createMarkup } from './js/createMarkup';
+import { createMarkup } from '../js/createMarkup';
 
 // https://pixabay.com/api/videos/?key={ KEY }&q=yellow+flowers
 
