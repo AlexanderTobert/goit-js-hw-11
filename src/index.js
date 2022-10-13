@@ -1,5 +1,5 @@
 import './css/styles.css';
-import { refs } from '../js/refs';
+import { refs } from '../src/js/refs';
 import axios from 'axios';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
