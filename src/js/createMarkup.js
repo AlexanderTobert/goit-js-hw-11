@@ -1,5 +1,5 @@
 export function createMarkup(photos) {
-  return markupGallery = photos
+  const markupGallery = photos
     .map(({ largeImageURL, webformatURL, tags, likes, views, comments, downloads}) => {
       return `<div class="photo-card">
         <a href="${largeImageURL}"><img class='photo-card__img' src="${webformatURL}" alt="${tags}" loading="lazy"/></a>
@@ -20,4 +20,5 @@ export function createMarkup(photos) {
   </div>`;
     })
     .join('');
+  return markupGallery;
 }
