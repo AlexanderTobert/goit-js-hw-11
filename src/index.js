@@ -87,7 +87,8 @@ async function getData() {
     console.log(response);
         
     if (response.data.hits.length === 0) {
-        Notiflix.Notify.failure('Sorry, there are no images matching your search query. Please try again.');
+      Notiflix.Notify.failure('Sorry, there are no images matching your search query. Please try again.');
+      return;
     } 
     if (response.data.hits.length !== 0) {
       Notiflix.Notify.info(`Hooray! We found ${response.data.totalHits} images.`);
@@ -98,11 +99,7 @@ async function getData() {
       io.observe(target);
       lightbox.refresh();
     }
-    if (response.data.hits.length < options.per_page) {
-      if (response.data.hits.length === 0) {
-        Notiflix.Notify.info('The END!!!');
-        return;
-      }
+    if (response.data.hits.length === response.data.totalHits) {
       Notiflix.Notify.failure("We're sorry, but you've reached the end of search results.");
       return;
       }
