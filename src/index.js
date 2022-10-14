@@ -62,6 +62,8 @@ function searchResult(e) {
   e.preventDefault();
   const searchQuery = e.currentTarget.elements.searchQuery.value.trim();
   if (!searchQuery) {
+    Notiflix.Notify.failure("Sorry, you didn't enter anything.");
+    reset();
     return;
   }
   dataQuery = searchQuery;
